@@ -28,7 +28,7 @@ function App() {
             <CountComponent initialCount='5' />
           </Route>
           <Route path="/aboutme">
-            <AboutMeComponent name="Rafalin Liyosar" />
+            <AboutMeComponent name="Rafalin Liyosar"/>
           </Route>
           <Route path="/learn">
             <header className="App-header">

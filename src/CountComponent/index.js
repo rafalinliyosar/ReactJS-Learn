@@ -1,23 +1,27 @@
 import React from 'react';
 
-export default class CountCompnent extends React.Component {
+export default class CountComponent extends React.Component {
     constructor(props) {
         super(props);
-
+        console.log(props)
         this.state = {
-            count: 0
+            count: parseInt(props.initialCount)
         };
     }
-    incrementclick = () => {
-
-        this.setState( {
+    incrementClick = () => {
+        this.setState({
             count: this.state.count + 1
         });
-
     }
-
     render() {
-        return (<div>The count is:{this.state.count}
-            <button onClick={this.incrementclick}>Click to increment</button></div>)
+        if(this.state.count === 12){
+            return (<div>Hello world, This is count component: The count is a dozen
+                <button onClick={this.incrementClick}>Increment</button>
+            </div>);
+
+        }
+        return (<div>Hello world, This is count component: {this.state.count}
+            <button onClick={this.incrementClick}>Increment</button>
+        </div>);
     }
 }
