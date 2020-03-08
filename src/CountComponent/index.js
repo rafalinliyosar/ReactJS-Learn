@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class CountCompnent extends React.Component {
+export default class CountComponent extends React.Component {
     constructor(props) {
         super(props);
 
@@ -18,6 +18,6 @@ export default class CountCompnent extends React.Component {
 
     render() {
         return (<div>The count is:{this.state.count}
-            <button onClick={this.incrementclick}>Click to increment</button></div>)
+            <button onClick={this.incrementclick}>Click to increment</button></div>);
     }
 }
