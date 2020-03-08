@@ -13,11 +13,13 @@ export default class CountComponent extends React.Component {
             count: this.state.count + 1
         });
     }
+
     render() {
         if(this.state.count === 12){
             return (<div>Hello world, This is count component: The count is a dozen
                 <button onClick={this.incrementClick}>Increment</button>
             </div>);
+
 
         }
         return (<div>Hello world, This is count component: {this.state.count}
