@@ -5,7 +5,8 @@ export default class CountComponent extends React.Component {
         super(props);
         console.log(props)
         this.state = {
-            count: parseInt(props.initialCount)
+            count: parseInt(props.initialCount),
+            name: "Rafalin Liyosar"
         };
     }
     incrementClick = () => {
@@ -14,15 +15,25 @@ export default class CountComponent extends React.Component {
         });
     }
 
+    onChangeName = (event) => {
+        this.setState({
+            name: event.target.value
+        })
+    }
+
     render() {
+       
+
         if(this.state.count === 12){
-            return (<div>Hello world, This is count component: The count is a dozen
+            return (
+            
+            <div><input type="text" value="" />Hello world, This is count component: The count is a dozen
                 <button onClick={this.incrementClick}>Increment</button>
             </div>);
 
 
         }
-        return (<div>Hello world, This is count component: {this.state.count}
+        return (<div><input type="text" id="name" value={this.state.name} onChange={this.onChangeName} />Hello {this.state.name}, This is count component: {this.state.count}
             <button onClick={this.incrementClick}>Increment</button>
         </div>);
     }
