@@ -10,6 +10,7 @@ import logo from './logo.svg';
 import './App.css';
 import CountComponent from './CountComponent';
 import AboutMeComponent from './AboutMeComponent';
+import Selectbox from './Selectbox';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           </li>
           <li><Link to="/aboutme">About Me</Link></li>
           <li><Link to="/learn">Learn</Link></li>
+          <li><Link to="/select">select</Link></li>
 
         </ul>
         <Switch>
@@ -45,6 +47,9 @@ function App() {
                 Rafalin Learn ReactJS by changing this component
         </a>
             </header>
+          </Route>
+          <Route path="/select">
+            <Selectbox />
           </Route>
         </Switch>
       </Router>
